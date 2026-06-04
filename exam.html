@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Question Bank · Bottled Water Production Line</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-head">
+    <div class="container wrap">
+        <a href="index.html" class="brand">
+            <span class="logo-mark">AQ</span>
+            <span>Bottled Water Production Line</span>
+        </a>
+        <nav class="primary">
+            <ul>
+                <li><a href="index.html">Project</a></li>
+                <li><a href="production-line.html">The Line</a></li>
+                <li><a href="system.html">System</a></li>
+                <li><a href="exam.html" class="active">Question Bank</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="page-strip">
+    <div class="container">
+        <h1>Theoretical Exam — Question Bank</h1>
+        <p>Twenty questions, each with the answer expected on the exam.</p>
+    </div>
+</section>
+
+<section class="block qa-section">
+    <div class="container">
+
+        <h3 class="cat-title">Version Control · Git</h3>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q1.</span> In the kitchen analogy, what does the &ldquo;staging area&rdquo; represent and which Git command moves a file into it?</span>
+            <div class="a">The staging area is the <em>cutting board</em> &mdash; ingredients prepped and ready to be plated. The command <code>git add &lt;file&gt;</code> moves a file from the working directory (counter) onto the staging area.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q2.</span> What does <code>git init</code> do, and what artifact does it create in your project folder?</span>
+            <div class="a"><code>git init</code> turns an ordinary directory into a Git repository. It creates a hidden <code>.git</code> folder where every future change is recorded &mdash; analogous to a head chef setting up a private notebook in an empty kitchen.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q3.</span> Explain the three-zone mental model of Git: working directory, staging area, and commit history.</span>
+            <div class="a">The working directory (counter) is where you actively edit files. <code>git add</code> moves chosen changes to the staging area (cutting board). <code>git commit</code> permanently snapshots the staged content into the commit history (cookbook), recording who, when, and what.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q4.</span> What is the difference between <code>git diff</code> and <code>git status</code>?</span>
+            <div class="a"><code>git status</code> lists <em>which</em> files have changed or are untracked. <code>git diff</code> shows the actual line-by-line differences between the working directory and the last commit.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q5.</span> What does <code>git restore &lt;file&gt;</code> do and when would you use it?</span>
+            <div class="a">It discards all uncommitted changes to a file and resets it to the last committed state. Use it when your edits were a mistake and you want to return to the last known good version.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q6.</span> What is a Git branch and why are branches described as &ldquo;cheap and isolated&rdquo;?</span>
+            <div class="a">A branch is a pointer to a parallel line of commits &mdash; an experimental kitchen where you can work freely without touching the main menu. Branches are cheap because Git stores only deltas between commits, and isolated because changes on one branch never affect another.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q7.</span> What does <code>git clone &lt;url&gt;</code> do and how is it different from <code>git init</code>?</span>
+            <div class="a"><code>git clone</code> downloads an existing repository including its full commit history onto your local machine. <code>git init</code> starts a brand-new, empty repository. Use <code>clone</code> when joining an existing project, <code>init</code> when starting from scratch.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q8.</span> What is a &ldquo;remote&rdquo; in Git, and what do <code>git push</code> and <code>git pull</code> do?</span>
+            <div class="a">A remote is a shared copy of the repository hosted on a server (e.g., GitHub). <code>git push</code> sends local commits up to the remote. <code>git pull</code> fetches and integrates new commits from the remote into your local branch.</div>
+        </div>
+
+        <h3 class="cat-title">Production Line &amp; Software Architecture</h3>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q9.</span> Which are the SEMI E10 Equipment States? Describe them.</span>
+            <div class="a">
+                <ul>
+                    <li><strong>STANDBY (or IDLE)</strong> &ndash; The equipment is available for processing material but is not processing any material at this time.</li>
+                    <li><strong>PRODUCTIVE</strong> &ndash; The equipment is processing material.</li>
+                    <li><strong>ENGINEERING</strong> &ndash; The equipment is under engineering control for tests, experiments, or any activity that produces non-productive or non-sellable results.</li>
+                    <li><strong>SCHEDULED DOWNTIME</strong> &ndash; The equipment is scheduled for a recurring preventive maintenance (PM) procedure and, as a result of the procedure, cannot (or may not be permitted to) process material.</li>
+                    <li><strong>UNSCHEDULED DOWNTIME</strong> &ndash; The equipment is not able to process material due to some type of unscheduled and/or unanticipated event.</li>
+                    <li><strong>NON-SCHEDULED DOWNTIME</strong> &ndash; The equipment is unable to process material because of the effects of an external event, such as a facility shutdown or site-wide power failure.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q10.</span> How are the SEMI E10 defined &ldquo;buckets&rdquo; of time represented?</span>
+            <div class="a">
+                Total Time splits into Operations Time + Non-Scheduled. Operations Time splits into Uptime + Downtime. Uptime breaks down further into Productive, Standby and Engineering; Downtime breaks down into Scheduled and Unscheduled.
+                <img src="images/e10-states.svg" alt="SEMI E10 time buckets" />
+            </div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q11.</span> What is an HMI (Human-Machine Interface) and what are the three rules of good HMI design?</span>
+            <div class="a">An HMI is the operator&rsquo;s window into the machine&rsquo;s back-end state. The three rules are: (1) show only what the operator needs <em>right now</em>, (2) make abnormal states visually unmistakable, and (3) never let the screen lie about the machine&rsquo;s state.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q12.</span> What is the difference between Back End and Front End, and how do they map to the production line simulation files?</span>
+            <div class="a">The Back End holds data, runs rules, and makes decisions (invisible to the user). The Front End presents state and forwards user intent. In this project, <code>production_line.py</code> is the Back End; <code>animation.py</code> is the Front End / HMI.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q13.</span> What is the role of the Abstract Base Class <code>Station</code> in the back end?</span>
+            <div class="a"><code>Station</code> defines the contract every workstation must honor: given an input, return an output or <code>None</code>. Concrete subclasses (<code>BottleBlow</code>, <code>WaterFill</code>, <code>CapOn</code>, <code>Label</code>, <code>QualityControl</code>) implement <code>process</code> their own way, letting the orchestrator treat every station identically and enforcing the Single Responsibility Principle.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q14.</span> What is the SEMI E10 standard and what are the three machine states used in the production-line demo?</span>
+            <div class="a">SEMI E10 classifies every second of a machine&rsquo;s time into mutually exclusive states. The three in the demo are: <strong>Productive</strong> (processing parts), <strong>Standby</strong> (ready but waiting), and <strong>Unscheduled Downtime</strong> (unexpected failure).</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q15.</span> What does OEE stand for, how is it calculated, and what is the world-class target?</span>
+            <div class="a">OEE = Availability &times; Performance &times; Quality. A world-class line targets OEE &ge; 85%. Unscheduled Downtime collapses Availability and therefore OEE regardless of how well other stations perform.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q16.</span> What is a Manufacturing Execution System (MES) and at which ISA-95 level does it operate?</span>
+            <div class="a">A MES tracks, coordinates, and optimizes everything on the factory floor in real time. It operates at <strong>Level 3</strong> of ISA-95, sitting between Level 1&ndash;2 (PLCs/SCADA) and Level 4 (ERP/business planning).</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q17.</span> What is a Finite State Machine (FSM) and where is one applied in <code>animation.py</code>?</span>
+            <div class="a">An FSM is a model where an entity occupies exactly one of a finite set of states at a time. In <code>animation.py</code>, each in-flight bottle has a <code>stage</code> field (<code>&quot;blowing&quot;</code>, <code>&quot;filling&quot;</code>, <code>&quot;capping&quot;</code>, <code>&quot;labeling&quot;</code>, <code>&quot;qc&quot;</code>, <code>&quot;packed&quot;</code>, <code>&quot;reject&quot;</code>) that the renderer reads to decide where to draw it.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q18.</span> In the InfluxDB/Grafana stack, which component writes data, which stores it, and which visualizes it?</span>
+            <div class="a"><code>producer.py</code> writes data via HTTP to <strong>InfluxDB</strong> (storage). <strong>Grafana</strong> queries InfluxDB and renders dashboards. The producer never talks to Grafana directly &mdash; mirroring real factory architectures where data source and visualization are independently replaceable.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q19.</span> What is Docker and what are its main applications?</span>
+            <div class="a">Docker is a containerization platform that packages applications and their dependencies into lightweight, portable containers. Docker ensures consistency across development, testing, and production environments. <strong>Main applications:</strong> microservices architecture, CI/CD pipelines, application deployment and scaling, isolated development environments, and facilitating multi-container applications through orchestration platforms like Kubernetes.</div>
+        </div>
+
+        <div class="qa-item">
+            <span class="q"><span class="qn">Q20.</span> Describe how the architecture of your project looks like.</span>
+            <div class="a">
+                This project simulates an automated bottled water production line. Five physical stations sit at the bottom: <strong>Bottle Blow</strong>, <strong>Water Fill</strong>, <strong>Cap On</strong>, <strong>Label</strong>, and <strong>QC &amp; Pack</strong>. Above them runs the Python back end (<code>production_line.py</code>): an abstract <code>Station</code> base class with five concrete subclasses, an orchestrator loop, a per-bottle finite state machine, and a SEMI E10 state log. On one side is the pygame HMI (<code>animation.py</code>) with Start / Stop / Reset controls and live alarms. On the other side is the data pipeline: <code>producer.py</code> &rarr; InfluxDB &rarr; Grafana, with fill temperature, line state, and bottles produced streamed live. Everything ships as Docker containers, and the simulator behaves as a small MES at ISA-95 Level 3.
+                <img src="images/architecture.svg" alt="Bottled Water Production Line architecture" />
+            </div>
+        </div>
+
+        <div class="intro-callout" style="margin-top: 30px;">
+            A printable Word version of this question bank with extra explanations is included in the project folder as <code>exam-questions.docx</code>.
+        </div>
+    </div>
+</section>
+
+<footer class="site-foot">
+    <div class="container wrap">
+        <div>&copy; Final Project &mdash; Advanced Programming, SRH</div>
+        <div><a href="production-line.html">The Line</a> &middot; <a href="system.html">System</a> &middot; <a href="exam.html">Question Bank</a></div>
+    </div>
+</footer>
+
+</body>
+</html>

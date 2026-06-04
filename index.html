@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bottled Water Production Line — Final Project</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-head">
+    <div class="container wrap">
+        <a href="index.html" class="brand">
+            <span class="logo-mark">AQ</span>
+            <span>Bottled Water Production Line</span>
+        </a>
+        <nav class="primary">
+            <ul>
+                <li><a href="index.html" class="active">Project</a></li>
+                <li><a href="production-line.html">The Line</a></li>
+                <li><a href="system.html">System</a></li>
+                <li><a href="exam.html">Question Bank</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <span class="tag">Final Project · Advanced Programming · SRH</span>
+        <h1>An automated bottled water production line, simulated in code.</h1>
+        <p class="lead">
+            Five stations &mdash; bottle blow, water fill, cap, label and quality check &mdash; modelled in Python, controlled through an HMI, and streamed live into a Grafana dashboard. The whole stack runs in Docker.
+        </p>
+        <a href="production-line.html" class="btn">See the line</a>
+        &nbsp;
+        <a href="system.html" class="btn alt">System architecture</a>
+    </div>
+</section>
+
+<section class="block">
+    <div class="container">
+        <h2 class="section-title">About this project</h2>
+        <p class="section-sub">A short tour of what was built, why it matters, and how to navigate the rest of the site.</p>
+
+        <p>This project is the final deliverable for the Advanced Programming course. The brief was open: choose a product with at least four assembly stages and build a complete, working simulation of its production line. I chose <strong>bottled drinking water</strong> &mdash; a real, everyday product with a five-station line that demonstrates every concept the course covered: object-oriented station modelling, finite state machines, SEMI E10 state tracking, OEE calculation, an operator HMI, a time-series data pipeline, and container deployment.</p>
+        <p style="margin-top: 12px;">The site is split into three working pages. <a href="production-line.html">The Line</a> walks through the physical product and what each of the five stations does. <a href="system.html">System</a> covers the software architecture &mdash; back end, front end, database, dashboard, and Docker. <a href="exam.html">Question Bank</a> is the 20-question study guide for the theoretical exam.</p>
+    </div>
+</section>
+
+<section class="block alt">
+    <div class="container">
+        <h2 class="section-title">The production flow</h2>
+        <p class="section-sub">A bottle enters the line as a plastic preform and leaves as a sealed, labelled, packed product. Five stations along the way, in order.</p>
+        <div class="figure" style="background:#fff; padding:18px; border:1px solid var(--c-line);">
+            <img src="images/production-flow.svg" alt="Five-station production flow" style="width:100%; display:block;" />
+        </div>
+    </div>
+</section>
+
+<section class="block">
+    <div class="container">
+        <h2 class="section-title">What is in the build</h2>
+        <p class="section-sub">Six components, all working together &mdash; nothing skipped, nothing mocked.</p>
+
+        <div class="grid-3">
+            <div class="card">
+                <div class="icon">01</div>
+                <h3>Back end &mdash; Python</h3>
+                <p>An abstract <code>Station</code> base class with five concrete subclasses, an orchestrator loop, and per-bottle finite state machines.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">02</div>
+                <h3>HMI &mdash; Operator screen</h3>
+                <p>Start / Stop / Reset controls, live state of every station, fault alarms that are visually unmistakable from across the bay.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">03</div>
+                <h3>InfluxDB &mdash; Time series</h3>
+                <p>Every measurement &mdash; station state, bottles produced, fill temperature, defect events &mdash; streamed and stored as time-series data.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">04</div>
+                <h3>Grafana &mdash; Dashboard</h3>
+                <p>OEE, throughput and downtime visualised in real time. The producer never touches Grafana directly &mdash; the database is the contract.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">05</div>
+                <h3>Docker &mdash; Deployment</h3>
+                <p>Each service in its own container. The whole line comes up with a single <code>docker compose up</code>.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">06</div>
+                <h3>Git &mdash; History</h3>
+                <p>The project lives on GitHub with a real branching history &mdash; features on branches, merges to <code>main</code>, tags on milestones.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="block alt">
+    <div class="container two-col">
+        <div>
+            <h2 class="section-title">System architecture</h2>
+            <p class="section-sub">Physical stations at the bottom, code-modelled stations in the middle, an HMI on one side and a data pipeline on the other &mdash; all running as Docker containers.</p>
+            <a href="system.html" class="btn">Open system page</a>
+        </div>
+        <div class="figure">
+            <img src="images/architecture.svg" alt="System architecture diagram" />
+        </div>
+    </div>
+</section>
+
+<section class="block">
+    <div class="container">
+        <div class="intro-callout">
+            <strong>Note on AI tools.</strong> Parts of this project were drafted with the help of AI assistants. The relevant prompts and outputs are included in the appendix of the accompanying PDF, along with corrections I made to the generated code.
+        </div>
+    </div>
+</section>
+
+<footer class="site-foot">
+    <div class="container wrap">
+        <div>&copy; Final Project &mdash; Advanced Programming, SRH</div>
+        <div><a href="production-line.html">The Line</a> &middot; <a href="system.html">System</a> &middot; <a href="exam.html">Question Bank</a></div>
+    </div>
+</footer>
+
+</body>
+</html>
