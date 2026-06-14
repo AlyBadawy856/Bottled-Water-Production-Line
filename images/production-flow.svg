@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" font-family="Segoe UI, Tahoma, sans-serif">
+  <defs>
+    <linearGradient id="bot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a4d8ec"/>
+      <stop offset="100%" stop-color="#4ea3c4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="320" fill="#fdfbf6"/>
+
+  <text x="500" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#14202b">Production Flow — 5 Stations</text>
+
+  <!-- conveyor base -->
+  <rect x="40" y="200" width="920" height="20" fill="#1a2530"/>
+  <g stroke="#3a4856" stroke-width="1" opacity="0.7">
+    <line x1="40" y1="206" x2="960" y2="206"/>
+    <line x1="40" y1="216" x2="960" y2="216"/>
+  </g>
+
+  <!-- station blocks with number, title, and tiny illustration -->
+  <!-- Station 1: Bottle Blow -->
+  <g>
+    <rect x="60" y="80" width="160" height="110" fill="#fff" stroke="#c64b1e" stroke-width="2"/>
+    <circle cx="90" cy="105" r="12" fill="#c64b1e"/>
+    <text x="90" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">1</text>
+    <text x="115" y="110" font-size="13" font-weight="700" fill="#14202b">Bottle Blow</text>
+    <!-- preform → bottle illustration -->
+    <rect x="80" y="135" width="12" height="38" fill="#3a4856" rx="2"/>
+    <text x="100" y="158" font-size="14" fill="#c64b1e">→</text>
+    <path d="M 125 173 L 125 145 Q 125 137 132 137 L 138 137 Q 145 137 145 145 L 145 173 Z" fill="url(#bot)" stroke="#3a4856"/>
+    <rect x="130" y="132" width="10" height="6" fill="#3a4856"/>
+
+    <!-- bottle on conveyor -->
+    <rect x="125" y="180" width="20" height="22" fill="url(#bot)" stroke="#3a4856"/>
+    <rect x="129" y="175" width="12" height="6" fill="#3a4856"/>
+  </g>
+
+  <text x="232" y="208" font-size="16" fill="#c64b1e" font-weight="700">→</text>
+
+  <!-- Station 2: Water Fill -->
+  <g>
+    <rect x="250" y="80" width="160" height="110" fill="#fff" stroke="#c64b1e" stroke-width="2"/>
+    <circle cx="280" cy="105" r="12" fill="#c64b1e"/>
+    <text x="280" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">2</text>
+    <text x="305" y="110" font-size="13" font-weight="700" fill="#14202b">Water Fill</text>
+
+    <!-- nozzle -->
+    <rect x="320" y="130" width="4" height="20" fill="#3a4856"/>
+    <polygon points="316,150 328,150 322,158" fill="#3a4856"/>
+    <line x1="322" y1="160" x2="322" y2="172" stroke="#7cc9e6" stroke-width="2"/>
+    <!-- bottle -->
+    <rect x="312" y="170" width="20" height="22" fill="url(#bot)" stroke="#3a4856"/>
+    <rect x="316" y="165" width="12" height="6" fill="#3a4856"/>
+  </g>
+
+  <text x="422" y="208" font-size="16" fill="#c64b1e" font-weight="700">→</text>
+
+  <!-- Station 3: Cap On -->
+  <g>
+    <rect x="440" y="80" width="160" height="110" fill="#fff" stroke="#c64b1e" stroke-width="2"/>
+    <circle cx="470" cy="105" r="12" fill="#c64b1e"/>
+    <text x="470" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">3</text>
+    <text x="495" y="110" font-size="13" font-weight="700" fill="#14202b">Cap On</text>
+
+    <!-- cap descending -->
+    <rect x="514" y="138" width="14" height="6" fill="#c64b1e"/>
+    <text x="522" y="160" text-anchor="middle" font-size="14" fill="#c64b1e">↓</text>
+    <!-- bottle with cap -->
+    <rect x="512" y="170" width="20" height="22" fill="url(#bot)" stroke="#3a4856"/>
+    <rect x="514" y="164" width="16" height="8" fill="#c64b1e"/>
+  </g>
+
+  <text x="612" y="208" font-size="16" fill="#c64b1e" font-weight="700">→</text>
+
+  <!-- Station 4: Label -->
+  <g>
+    <rect x="630" y="80" width="160" height="110" fill="#fff" stroke="#c64b1e" stroke-width="2"/>
+    <circle cx="660" cy="105" r="12" fill="#c64b1e"/>
+    <text x="660" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">4</text>
+    <text x="685" y="110" font-size="13" font-weight="700" fill="#14202b">Label</text>
+
+    <!-- label roll -->
+    <circle cx="690" cy="148" r="10" fill="#fff" stroke="#3a4856"/>
+    <text x="690" y="152" text-anchor="middle" font-size="9" fill="#3a4856">AQ</text>
+    <line x1="700" y1="148" x2="710" y2="170" stroke="#3a4856"/>
+    <!-- labeled bottle -->
+    <rect x="702" y="170" width="20" height="22" fill="url(#bot)" stroke="#3a4856"/>
+    <rect x="704" y="164" width="16" height="6" fill="#c64b1e"/>
+    <rect x="703" y="176" width="18" height="10" fill="#fff" opacity="0.9"/>
+    <text x="712" y="184" text-anchor="middle" font-size="6" fill="#c64b1e">AQ</text>
+  </g>
+
+  <text x="802" y="208" font-size="16" fill="#c64b1e" font-weight="700">→</text>
+
+  <!-- Station 5: QC & Pack -->
+  <g>
+    <rect x="820" y="80" width="160" height="110" fill="#fff" stroke="#c64b1e" stroke-width="2"/>
+    <circle cx="850" cy="105" r="12" fill="#c64b1e"/>
+    <text x="850" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">5</text>
+    <text x="875" y="110" font-size="13" font-weight="700" fill="#14202b">QC &amp; Pack</text>
+
+    <!-- magnifier -->
+    <circle cx="870" cy="148" r="10" fill="none" stroke="#3a4856" stroke-width="2"/>
+    <line x1="877" y1="155" x2="884" y2="162" stroke="#3a4856" stroke-width="2"/>
+    <!-- box -->
+    <rect x="895" y="160" width="36" height="30" fill="#d4a574" stroke="#8a5a2a"/>
+    <line x1="895" y1="170" x2="931" y2="170" stroke="#8a5a2a"/>
+    <text x="913" y="184" text-anchor="middle" font-size="9" fill="#8a5a2a">OK</text>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="500" y="280" text-anchor="middle" font-size="12" fill="#5b6770">A defective bottle at any station is removed from the line; the FSM transitions it to the reject bin.</text>
+</svg>
