@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Past Project — Space Shooter</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-head">
+    <div class="container wrap">
+        <a href="index.html" class="brand">
+            <span class="logo-mark">AQ</span>
+            <span>Bottled Water Production Line</span>
+        </a>
+        <nav class="primary">
+            <ul>
+                <li><a href="index.html">Project</a></li>
+                <li><a href="production-line.html">The Line</a></li>
+                <li><a href="system.html">System</a></li>
+                <li><a href="exam.html">Question Bank</a></li>
+                <li><a href="space-shooter.html" class="active">Space Shooter</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="page-strip">
+    <div class="container">
+        <h1>Past Project — Space Shooter</h1>
+        <p>A Python / pygame arcade shooter built for a previous module of the same course.</p>
+    </div>
+</section>
+
+<section class="block">
+    <div class="container">
+
+        <h2 class="section-title">About</h2>
+        <p class="section-sub">A small, polished arcade game from earlier coursework — included here at the instructor's request.</p>
+        <p>This is an earlier project I built in Python using the pygame library. It is a top-down space shooter with wave-based progression, a power-up system, a combo multiplier, and boss fights every few waves. Three difficulty modes scale the enemy speed, fire rate and HP. The game tracks a per-session high score and exits cleanly on game over.</p>
+
+        <hr class="div" />
+
+        <h2 class="section-title">Title screen</h2>
+        <div class="figure">
+            <img src="images/space-shooter/title.png" alt="Space Shooter title screen with controls" style="width:100%; display:block;" />
+        </div>
+        <p style="margin-top: 12px;">The title screen presents the controls up-front: WASD or arrow keys to move, SPACE held down to fire, Shift for a slower precision speed, and P to pause. The player picks difficulty (1, 2 or 3) and presses ENTER to start.</p>
+
+        <hr class="div" />
+
+        <h2 class="section-title">Gameplay — shield active, combo running</h2>
+        <div class="figure">
+            <img src="images/space-shooter/gameplay.png" alt="Gameplay with shield and combo" style="width:100%; display:block;" />
+        </div>
+        <p style="margin-top: 12px;">During a wave the player ship navigates incoming enemies and projectiles. Power-ups drop on enemy kills: <strong>Rapid</strong> raises fire rate, <strong>Spread</strong> widens the shot pattern, <strong>Shield</strong> absorbs hits for a fixed window, and <strong>Heal</strong> restores HP. Consecutive kills without taking damage build a combo multiplier that boosts the score.</p>
+
+        <hr class="div" />
+
+        <h2 class="section-title">Boss fight</h2>
+        <div class="figure">
+            <img src="images/space-shooter/boss.png" alt="Boss fight with dense bullet pattern" style="width:100%; display:block;" />
+        </div>
+        <p style="margin-top: 12px;">A boss appears every few waves. Bosses have their own HP bar, a wide attack pattern, and a different colour so the player notices the shift in difficulty immediately. The Rapid power-up is the right choice during a boss window — visible here with 4.3 seconds left on its timer.</p>
+
+        <hr class="div" />
+
+        <h2 class="section-title">Game over</h2>
+        <div class="figure">
+            <img src="images/space-shooter/game-over.png" alt="Game over screen" style="width:100%; display:block;" />
+        </div>
+        <p style="margin-top: 12px;">When HP hits zero, the game shows the final score and the session high, and prompts the player to press R to restart or ESC to quit. The background simulation keeps running so the screen stays visually alive.</p>
+
+        <hr class="div" />
+
+        <h2 class="section-title">Tech &amp; features</h2>
+        <ul style="margin-left: 22px; line-height: 1.8;">
+            <li>Written in Python 3 using the pygame library.</li>
+            <li>Three difficulty levels scaling enemy speed, HP and spawn rate.</li>
+            <li>Power-up system: Rapid, Spread, Shield, Heal — each with its own timer.</li>
+            <li>Combo multiplier for chained kills without taking damage.</li>
+            <li>Wave-based progression with bosses every few waves.</li>
+            <li>HP bar, shield bar, and active power-up readout.</li>
+            <li>Per-session high score persistence and clean game-over flow.</li>
+        </ul>
+
+        <div class="intro-callout" style="margin-top: 30px;">
+            This is a previous project from earlier coursework. The main deliverable of this site is the <a href="index.html">bottled water production line</a> described on the home page.
+        </div>
+    </div>
+</section>
+
+<footer class="site-foot">
+    <div class="container wrap">
+        <div>&copy; Final Project &mdash; Advanced Programming, SRH</div>
+        <div><a href="production-line.html">The Line</a> &middot; <a href="system.html">System</a> &middot; <a href="exam.html">Question Bank</a> &middot; <a href="space-shooter.html">Space Shooter</a></div>
+    </div>
+</footer>
+
+</body>
+</html>
